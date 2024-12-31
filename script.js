@@ -4,25 +4,94 @@ AOS.init({
     once: true
 });
 
-// Navbar color change on scroll
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-        document.querySelector('.navbar').classList.add('scrolled');
-    } else {
-        document.querySelector('.navbar').classList.remove('scrolled');
-    }
-});
+// Advanced Navbar Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop - 70,
-            behavior: 'smooth'
+    // Hamburger menu animation
+    if (hamburgerIcon) {
+        hamburgerIcon.addEventListener('click', function() {
+            this.classList.toggle('active');
+            if (this.classList.contains('active')) {
+                this.children[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                this.children[1].style.opacity = '0';
+                this.children[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                this.children[0].style.transform = 'none';
+                this.children[1].style.opacity = '1';
+                this.children[2].style.transform = 'none';
+            }
+        });
+    }
+
+    // Active link highlighting
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
         });
     });
+
+    // Smooth scrolling with offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            const navbarHeight = navbar.offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            
+            window.scrollTo({
+                top: targetPosition - navbarHeight,
+                behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                document.querySelector('.navbar-toggler').click();
+            }
+        });
+    });
+
+    // Notification system
+    const notificationBell = document.querySelector('.notification-bell');
+    const notificationDot = document.querySelector('.notification-dot');
+    const markAllRead = document.querySelector('.mark-all');
+    const notificationItems = document.querySelectorAll('.notification-item');
+
+    if (markAllRead) {
+        markAllRead.addEventListener('click', function(e) {
+            e.preventDefault();
+            notificationItems.forEach(item => item.classList.remove('unread'));
+            notificationDot.style.display = 'none';
+        });
+    }
+
+    // Profile dropdown positioning
+    const profileDropdown = document.querySelector('.profile-dropdown');
+    if (profileDropdown) {
+        const dropdownMenu = profileDropdown.querySelector('.dropdown-menu');
+        
+        profileDropdown.addEventListener('show.bs.dropdown', function() {
+            const rect = profileDropdown.getBoundingClientRect();
+            const spaceBelow = window.innerHeight - rect.bottom;
+            
+            if (spaceBelow < dropdownMenu.offsetHeight && rect.top > dropdownMenu.offsetHeight) {
+                dropdownMenu.classList.add('dropdown-menu-up');
+            }
+        });
+    }
 });
 
 // Form submission handling

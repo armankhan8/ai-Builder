@@ -11,31 +11,62 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Your Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <div class="logo-wrapper">
+                    <span class="logo-text">SWAI Tech</span>
+                    <span class="logo-dot"></span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
+
+            <!-- Navigation Items -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">
+                            <i class="fas fa-user"></i>
+                            <span>About</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#services">
+                            <i class="fas fa-cog"></i>
+                            <span>Services</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Work</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -44,89 +75,68 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Animated Background -->
-        <div class="hero-particles" id="particles-js"></div>
-
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <!-- Left Content -->
-                <div class="col-lg-6" data-aos="fade-right">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
                     <div class="hero-content">
-                        <div class="badge-wrapper mb-4">
+                        <div class="badge-wrapper">
                             <span class="badge status-badge">
                                 <span class="status-dot"></span>
-                                Available for Projects
+                                Available for New Projects
                             </span>
                         </div>
 
-                        <h1 class="hero-title display-4 fw-bold mb-4">
-                            Professional
-                            <span class="highlight-text">Web Solutions</span>
-                            <br>For Your Business
+                        <h1 class="hero-title">
+                            Transform Your Business with 
+                            <span class="highlight-text">Professional Web Development</span>
                         </h1>
 
-                        <p class="hero-description lead mb-4">
-                            Creating modern and professional websites with clean design 
-                            and powerful functionality.
+                        <p class="hero-description">
+                            Custom websites that drive results. From small business sites to complex web applications - we deliver modern, fast, and user-friendly solutions.
                         </p>
 
-                        <!-- Experience Stats -->
-                        <div class="experience-stats mb-5">
-                            <div class="row g-4">
-                                <div class="col-4">
-                                    <div class="stat-card">
-                                        <div class="stat-number" data-count="100">0</div>
-                                        <div class="stat-label">Projects</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-card">
-                                        <div class="stat-number" data-count="50">0</div>
-                                        <div class="stat-label">Clients</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-card">
-                                        <div class="stat-number" data-count="5">0</div>
-                                        <div class="stat-label">Years</div>
-                                    </div>
-                                </div>
+                        <!-- Trust Indicators -->
+                        <div class="trust-indicators">
+                            <div class="indicator">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Client Satisfaction</span>
+                            </div>
+                            <div class="indicator">
+                                <i class="fas fa-rocket"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                            <div class="indicator">
+                                <i class="fas fa-headset"></i>
+                                <span>24/7 Support</span>
                             </div>
                         </div>
 
-                        <!-- CTA Buttons -->
                         <div class="hero-cta">
-                            <a href="#contact" class="btn btn-primary btn-lg me-3">
-                                Start Project
-                                <i class="fas fa-arrow-right ms-2"></i>
+                            <a href="#contact" class="btn btn-primary btn-lg">
+                                Start Your Project
+                                <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="#portfolio" class="btn btn-outline-light btn-lg">
-                                View Work
+                            <a href="tel:+918130857008" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-phone"></i>
+                                Call Now
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right Content - 3D Animation -->
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="hero-image-container">
+                
+                <!-- Right side animation -->
+                <div class="col-lg-6">
+                    <div class="hero-image">
                         <lottie-player 
                             src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json"
                             background="transparent"
                             speed="1"
-                            class="hero-lottie"
                             loop
                             autoplay>
                         </lottie-player>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-down">
-            <div class="mouse"></div>
-            <span>Scroll Down</span>
         </div>
     </section>
 
@@ -151,23 +161,39 @@
                 <!-- Right Side Content -->
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="about-content">
-                        <h2 class="section-title">About Me</h2>
-                        <p class="lead">Web Developer & UI/UX Designer</p>
-                        <p class="about-text">Your about text here...</p>
+                        <div class="section-header">
+                            <h2 class="section-title">About <span class="highlight-text">Me</span></h2>
+                            <p class="section-subtitle">Web Developer & UI/UX Designer</p>
+                        </div>
+                        <div class="about-text">
+                            <p>Swai Tech is a leading provider of AI-powered full solutions, dedicated to transforming businesses through innovation and technology. Our expert team specializes in creating customized AI solutions that enhance efficiency, drive growth, and deliver measurable results across industries.</p>
+                            <p>With a focus on quality, transparency, and cutting-edge technology, Swai Tech is your trusted partner for navigating the digital future.</p>
+                        </div>
                         <div class="skills-container">
-                            <!-- Skills with 3D icons -->
                             <div class="skill-item">
-                                <lottie-player 
-                                    src="https://assets9.lottiefiles.com/packages/lf20_rqfktm9f.json"
-                                    background="transparent"
-                                    speed="1"
-                                    style="width: 60px; height: 60px;"
-                                    loop
-                                    autoplay>
-                                </lottie-player>
-                                <span>Web Development</span>
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <h4>React</h4>
                             </div>
-                            <!-- Add more skills -->
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <h4>Node.js</h4>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h4>Python</h4>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>MongoDB</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,173 +202,224 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-5">
+    <section id="services" class="services-section">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">My Services</h2>
-                <div class="title-separator mx-auto"></div>
-                <p class="lead text-muted">Providing high-quality web solutions for your business</p>
+            <div class="section-header text-center">
+                <h2>Web Development Solutions</h2>
+                <p class="lead">Choose the perfect website package for your business</p>
             </div>
-            
-            <div class="row g-4 mt-4">
-                <!-- Service Card 1 -->
-                <div class="col-md-4">
-                    <div class="service-card card-3d">
-                        <div class="service-icon glow-effect">
-                            <lottie-player 
-                                src="https://assets3.lottiefiles.com/packages/lf20_iorpbol7.json"
-                                background="transparent"
-                                speed="1"
-                                style="width: 150px; height: 150px;"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <div class="content-3d">
-                            <h3>Web Development</h3>
-                            <p>Modern and responsive websites...</p>
-                        </div>
+
+            <div class="row g-4">
+                <!-- Basic Package -->
+                <div class="col-lg-4">
+                    <div class="service-card pricing-card">
+                        <div class="package-name">Basic Website</div>
+                        <div class="price">Starting at ₹9,999</div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 5 Pages Website</li>
+                            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                            <li><i class="fas fa-check"></i> Contact Form</li>
+                            <li><i class="fas fa-check"></i> Social Media Integration</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
                     </div>
                 </div>
 
-                <!-- Service Card 2 -->
-                <div class="col-md-4">
-                    <div class="service-card card-3d">
-                        <div class="service-icon glow-effect">
-                            <lottie-player 
-                                src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
-                                background="transparent"
-                                speed="1"
-                                style="width: 150px; height: 150px;"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <div class="content-3d">
-                            <h3>UI/UX Design</h3>
-                            <p>User-friendly interface design...</p>
-                        </div>
+                <!-- Professional Package -->
+                <div class="col-lg-4">
+                    <div class="service-card pricing-card featured">
+                        <div class="package-name">E-commerce Website</div>
+                        <div class="price">Starting at ₹24,999</div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Full E-commerce Setup</li>
+                            <li><i class="fas fa-check"></i> Payment Gateway</li>
+                            <li><i class="fas fa-check"></i> Product Management</li>
+                            <li><i class="fas fa-check"></i> Order Tracking</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
                     </div>
                 </div>
 
-                <!-- Service Card 3 -->
-                <div class="col-md-4">
-                    <div class="service-card card-3d">
-                        <div class="service-icon glow-effect">
-                            <lottie-player 
-                                src="https://assets2.lottiefiles.com/packages/lf20_pwohahvd.json"
-                                background="transparent"
-                                speed="1"
-                                style="width: 150px; height: 150px;"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <div class="content-3d">
-                            <h3>Mobile Development</h3>
-                            <p>Cross-platform mobile apps...</p>
-                        </div>
+                <!-- Custom Package -->
+                <div class="col-lg-4">
+                    <div class="service-card pricing-card">
+                        <div class="package-name">Custom Solution</div>
+                        <div class="price">Custom Quote</div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Custom Features</li>
+                            <li><i class="fas fa-check"></i> Advanced Functionality</li>
+                            <li><i class="fas fa-check"></i> API Integration</li>
+                            <li><i class="fas fa-check"></i> Scalable Solution</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Get Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5 bg-light">
+    <!-- Work Showcase Section -->
+    <section id="portfolio" class="showcase-section py-5">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold">My Portfolio</h2>
-                <p class="text-muted lead">Featured Projects & Work</p>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Portfolio</span>
+                <h2 class="section-title">Our Recent Work</h2>
+                <p class="section-subtitle">Transforming Ideas into Digital Excellence</p>
+                <div class="title-separator">
+                    <span></span>
+                    <i class="fas fa-code"></i>
+                    <span></span>
+                </div>
             </div>
 
-            <!-- Portfolio Filters -->
-            <div class="portfolio-filters mb-5">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="app">App Development</button>
-                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
-            </div>
-
-            <!-- Portfolio Grid -->
-            <div class="portfolio-grid-pro">
+            <div class="row g-4">
                 <!-- E-commerce Project -->
-                <div class="portfolio-item-pro card-3d" data-category="web">
-                    <div class="portfolio-image-pro glow-effect">
-                        <lottie-player 
-                            src="https://assets5.lottiefiles.com/packages/lf20_fq7pwzey.json"
-                            background="transparent"
-                            speed="1"
-                            loop
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                    <div class="portfolio-content-pro glass-effect">
-                        <span class="portfolio-category">Web Development</span>
-                        <h4 class="portfolio-title">E-commerce Platform</h4>
-                        <p class="portfolio-description">Full-featured online shopping platform with modern UI/UX</p>
-                        <div class="portfolio-tags-pro">
-                            <span class="tag-pro">React.js</span>
-                            <span class="tag-pro">Node.js</span>
-                            <span class="tag-pro">MongoDB</span>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/600x400" alt="E-commerce Project">
                         </div>
-                        <div class="portfolio-actions">
-                            <a href="#" class="action-btn btn-demo btn-3d glow-effect">Live Demo</a>
-                            <a href="#" class="action-btn btn-code btn-3d glow-effect">View Code</a>
+                        <div class="work-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="work-content">
+                            <h3>Fashion Store</h3>
+                            <p>Modern e-commerce platform with seamless shopping experience</p>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Social Media App -->
-                <div class="portfolio-item-pro card-3d" data-category="app">
-                    <div class="portfolio-image-pro glow-effect">
-                        <lottie-player 
-                            src="https://assets2.lottiefiles.com/packages/lf20_9wpyhdzo.json"
-                            background="transparent"
-                            speed="1"
-                            loop
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                    <div class="portfolio-content-pro glass-effect">
-                        <span class="portfolio-category">App Development</span>
-                        <h4 class="portfolio-title">Social Network App</h4>
-                        <p class="portfolio-description">Modern social platform with real-time features</p>
-                        <div class="portfolio-tags-pro">
-                            <span class="tag-pro">Flutter</span>
-                            <span class="tag-pro">Firebase</span>
-                            <span class="tag-pro">WebRTC</span>
+                <!-- Business Website -->
+                <div class="col-lg-4">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Business Website">
                         </div>
-                        <div class="portfolio-actions">
-                            <a href="#" class="action-btn btn-demo btn-3d glow-effect">View App</a>
-                            <a href="#" class="action-btn btn-code btn-3d glow-effect">Source Code</a>
+                        <div class="work-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="work-content">
+                            <h3>Corporate Solutions</h3>
+                            <p>Professional business website with modern design</p>
+                            <div class="tech-stack">
+                                <span>WordPress</span>
+                                <span>Custom Theme</span>
+                                <span>SEO</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dashboard Project -->
-                <div class="portfolio-item-pro card-3d" data-category="ui">
-                    <div class="portfolio-image-pro glow-effect">
-                        <lottie-player 
-                            src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
-                            background="transparent"
-                            speed="1"
-                            loop
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                    <div class="portfolio-content-pro glass-effect">
-                        <span class="portfolio-category">UI/UX Design</span>
-                        <h4 class="portfolio-title">Analytics Dashboard</h4>
-                        <p class="portfolio-description">Modern admin panel with data visualization</p>
-                        <div class="portfolio-tags-pro">
-                            <span class="tag-pro">Figma</span>
-                            <span class="tag-pro">Adobe XD</span>
-                            <span class="tag-pro">Webflow</span>
+                <!-- Restaurant Website -->
+                <div class="col-lg-4">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Restaurant Website">
                         </div>
-                        <div class="portfolio-actions">
-                            <a href="#" class="action-btn btn-demo btn-3d glow-effect">Live Preview</a>
-                            <a href="#" class="action-btn btn-code btn-3d glow-effect">Design Files</a>
+                        <div class="work-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="work-content">
+                            <h3>Food Delivery</h3>
+                            <p>Restaurant website with online ordering system</p>
+                            <div class="tech-stack">
+                                <span>Next.js</span>
+                                <span>Stripe</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Process Section -->
+            <div class="work-process mt-5">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">Our Development Process</h2>
+                    <p class="section-subtitle">How We Bring Your Vision to Life</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Planning Step -->
+                    <div class="col-md-4">
+                        <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="process-icon">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="step-number">01</div>
+                            </div>
+                            <div class="process-content">
+                                <h3>Planning & Strategy</h3>
+                                <p>We collaborate closely to understand your vision and create a strategic roadmap.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check-circle"></i> Requirements Analysis</li>
+                                    <li><i class="fas fa-check-circle"></i> Custom Design Planning</li>
+                                    <li><i class="fas fa-check-circle"></i> Technology Selection</li>
+                                    <li><i class="fas fa-check-circle"></i> Timeline Mapping</li>
+                                </ul>
+                                <div class="process-timeline">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-label">Week 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Step -->
+                    <div class="col-md-4">
+                        <div class="process-card active" data-aos="fade-up" data-aos-delay="200">
+                            <div class="process-icon">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="step-number">02</div>
+                            </div>
+                            <div class="process-content">
+                                <h3>Development & Design</h3>
+                                <p>Our expert team brings your website to life using cutting-edge technologies.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+                                    <li><i class="fas fa-check-circle"></i> Clean Code Architecture</li>
+                                    <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                                    <li><i class="fas fa-check-circle"></i> Regular Updates</li>
+                                </ul>
+                                <div class="process-timeline">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-label">Week 2-3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Launch Step -->
+                    <div class="col-md-4">
+                        <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="process-icon">
+                                <div class="icon-wrapper">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="step-number">03</div>
+                            </div>
+                            <div class="process-content">
+                                <h3>Launch & Support</h3>
+                                <p>We ensure smooth deployment and provide continuous technical support.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check-circle"></i> Quality Testing</li>
+                                    <li><i class="fas fa-check-circle"></i> Security Implementation</li>
+                                    <li><i class="fas fa-check-circle"></i> Performance Monitoring</li>
+                                    <li><i class="fas fa-check-circle"></i> 24/7 Support Access</li>
+                                </ul>
+                                <div class="process-timeline">
+                                    <span class="timeline-dot"></span>
+                                    <span class="timeline-label">Week 4</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -351,60 +428,248 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="py-5 contact-section">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Get In Touch</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Get In Touch</h2>
+                <p class="text-muted lead">Let's discuss your project and make it happen</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Contact Info Cards -->
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
                                 <h4>Location</h4>
                                 <p>New Delhi, India</p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
                                 <h4>Email</h4>
-                                <p>your.email@example.com</p>
+                                <p>contact@swaitech.com</p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
                                 <h4>Phone</h4>
-                                <p>+91 1234567890</p>
+                                <p><a href="tel:+918130857008">+91 8130857008</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <form id="contactForm" class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Subject" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100 btn-3d glow-effect">Send Message</button>
-                    </form>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" placeholder="Your Message" style="height: 150px" required></textarea>
+                                        <label for="message">Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        Send Message
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 text-center">
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer class="footer">
+        <!-- Achievement Stats -->
+        <div class="achievement-section py-4">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="achievement-item">
+                            <div class="achievement-number">100+</div>
+                            <div class="achievement-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="achievement-item">
+                            <div class="achievement-number">50+</div>
+                            <div class="achievement-label">Happy Clients</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="achievement-item">
+                            <div class="achievement-number">24/7</div>
+                            <div class="achievement-label">Support Available</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="achievement-item">
+                            <div class="achievement-number">100%</div>
+                            <div class="achievement-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rest of your existing footer content -->
+        <div class="footer-top py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-4">
+                        <div class="footer-info">
+                            <div class="footer-logo">
+                                <span class="logo-text">SWAI Tech</span>
+                                <span class="logo-dot"></span>
+                            </div>
+                            <p class="footer-desc">
+                                Professional web development solutions for businesses. Transform your digital presence with our expert services.
+                            </p>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <a href="tel:+918130857008">+91 8130857008</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:contact@swaitech.com">contact@swaitech.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="#services">Web Development</a></li>
+                                <li><a href="#services">E-commerce Solutions</a></li>
+                                <li><a href="#services">Custom Web Apps</a></li>
+                                <li><a href="#services">Website Maintenance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-lg-3">
+                        <div class="footer-social">
+                            <h4>Connect With Us</h4>
+                            <div class="social-icons">
+                                <a href="https://instagram.com/your-handle" class="social-icon instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://facebook.com/your-page" class="social-icon facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://wa.me/918130857008" class="social-icon whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="tel:+918130857008" class="social-icon call">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            <div class="cta-text mt-4">
+                                <p>Ready to start your project?</p>
+                                <a href="#contact" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            <p class="mb-0">&copy; 2024 Swai Tech. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-methods">
+                            <span>We Accept:</span>
+                            <div class="payment-icons">
+                                <div class="payment-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                    <span>UPI</span>
+                                </div>
+                                <div class="payment-icon">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <span>Card</span>
+                                </div>
+                                <div class="payment-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Paytm_Logo_%28standalone%29.svg" alt="Paytm">
+                                    <span>Paytm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Contact Button -->
+        <div class="floating-contact">
+            <a href="tel:+918130857008" class="floating-btn phone-btn" data-tooltip="Call Now">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/918130857008" class="floating-btn whatsapp-btn" data-tooltip="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
     </footer>
 
@@ -414,5 +679,4 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
 </html> 
